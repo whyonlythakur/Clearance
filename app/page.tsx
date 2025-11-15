@@ -72,13 +72,13 @@ export default function ArpitCard() {
           <div className="p-8">
             {/* Expandable Quote */}
             <div
-              className="inline-flex items-center justify-center gap-2 bg-primary/5 border border-primary/20 rounded-full px-3 py-1 mb-6 cursor-pointer transition-all duration-300 hover:bg-primary/10 w-full"
+              className="flex items-center justify-center gap-2 bg-primary/5 border border-primary/20 rounded-full px-3 py-1 mb-6 cursor-pointer transition-all duration-300 hover:bg-primary/10 w-full"
               onClick={() => setQuoteExpanded(!quoteExpanded)}
               onMouseEnter={() => setIsHovering(true)}
               onMouseLeave={() => setIsHovering(false)}
             >
-              <span className={`text-xs font-semibold text-primary ${isHovering ? 'typewriter-text active' : ''}`}>
-                {isHovering ? "Jack of All, Master of None, but oftentimes better than Master of One" : "Jack of All"}
+              <span className={`text-[10px] font-semibold text-primary ${isHovering ? 'typewriter-text active' : ''}`}>
+                {isHovering ? "Jack of All, Master of None, but oftentimes better than Master of One":"Jack of All"}
               </span>
             </div>
 
