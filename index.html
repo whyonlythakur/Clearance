@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clearance — Password Breach & Strength Checker</title>
+<meta name="description" content="Check password strength and breach exposure entirely client-side. Nothing is ever sent to a server in plaintext.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scanlines"></div>
+
+<header>
+  <div class="logo">&lt;/&gt; Thakur<span>.security</span></div>
+  <a class="repo-link" href="https://github.com/whyonlythakur/password-breach-checker" target="_blank" rel="noopener">View Source →</a>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="case-tag">CASE FILE — OPEN</div>
+    <h1>Clearance<span>.</span></h1>
+    <p class="dek">
+      A password strength &amp; breach exposure checker that never phones home with your password.
+      Everything below runs in <em>your</em> browser — I don't see it, and neither does anyone else.
+    </p>
+  </section>
+
+  <section class="terminal-card">
+    <div class="terminal-bar">
+      <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+      <span class="terminal-title">clearance@scan ~ password_audit</span>
+    </div>
+
+    <div class="terminal-body">
+      <label for="pw-input" class="field-label">$ enter password to audit</label>
+      <div class="input-row">
+        <input type="password" id="pw-input" autocomplete="new-password" placeholder="Type or paste a password…" spellcheck="false">
+        <button id="toggle-visibility" type="button" aria-label="Toggle password visibility">👁</button>
+      </div>
+
+      <div class="meter-row">
+        <div class="meter-track">
+          <div class="meter-fill" id="meter-fill"></div>
+        </div>
+        <span class="meter-label" id="meter-label">—</span>
+      </div>
+
+      <div class="grid-two">
+        <div class="readout-block">
+          <div class="readout-title">// entropy analysis</div>
+          <div class="readout-line"><span>Entropy</span><b id="out-entropy">—</b></div>
+          <div class="readout-line"><span>Character pool</span><b id="out-pool">—</b></div>
+          <div class="readout-line"><span>Length</span><b id="out-length">—</b></div>
+        </div>
+        <div class="readout-block">
+          <div class="readout-title">// est. time to crack</div>
+          <div class="readout-line"><span>Online, throttled</span><b id="out-online">—</b></div>
+          <div class="readout-line"><span>Offline, slow hash</span><b id="out-offline-slow">—</b></div>
+          <div class="readout-line"><span>Offline, GPU farm</span><b id="out-offline-fast">—</b></div>
+        </div>
+      </div>
+
+      <div class="breach-block" id="breach-block">
+        <div class="readout-title">// breach exposure (HaveIBeenPwned, k-anonymity)</div>
+        <div id="breach-result" class="breach-idle">Start typing to run a check — nothing is sent until 500ms after you stop.</div>
+      </div>
+
+      <details class="privacy-note">
+        <summary>How is this private?</summary>
+        <p>
+          Your password never leaves your device in plaintext. It's hashed locally with SHA-1 in your browser,
+          then only the <b>first 5 characters</b> of that hash are sent to the HaveIBeenPwned Pwned Passwords API.
+          HIBP returns every breached hash suffix that starts with those 5 characters — often thousands of them —
+          and the match happens locally on your device. This is the same
+          <a href="https://blog.cloudflare.com/validating-leaked-passwords-with-k-anonymity/" target="_blank" rel="noopener">k-anonymity model</a>
+          used by Chrome, Firefox, and 1Password's breach checks.
+        </p>
+      </details>
+    </div>
+  </section>
+
+  <section class="notes">
+    <div class="case-tag">FIELD NOTES</div>
+    <p>
+      Built out of the same curiosity that pulled me into cybercrime forensics work with the Haryana Police
+      Cyber Cell — most people have no idea how exposed a "strong-looking" password can be until it's checked
+      against real breach data. This tool is the pocket version of that lesson.
+    </p>
+  </section>
+</main>
+
+<footer>
+  <div>&lt;/&gt; Built by Arpit Singh — <a href="https://thakur.dev" target="_blank" rel="noopener">thakur.dev</a></div>
+  <div>Breach data via <a href="https://haveibeenpwned.com/Passwords" target="_blank" rel="noopener">HaveIBeenPwned</a></div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
