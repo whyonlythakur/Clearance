@@ -3,7 +3,7 @@
 A password strength and breach-exposure checker that runs **entirely in the browser**.
 No backend, no password ever transmitted in plaintext, no tracking.
 
-**[Live Demo →]([https://whyonlythakur.github.io/password-breach-checker/](https://whyonlythakur.github.io/Clearance/))** 
+**[Live Demo →](https://whyonlythakur.github.io/Clearance/)** 
 
 ![screenshot placeholder](Screenshot.png)
 
