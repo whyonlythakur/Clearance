@@ -72,5 +72,5 @@ That's it — no server, no environment variables, no cost.
 
 ---
 
-Built by [Arpit Singh](https://thakur.dev) — part of an ongoing series of small, real security
-tools built out of the cybersecurity work I do with the Haryana Police Cyber Cell.
+Built by [Arpit Singh](https://thakur.snapz.dev) — part of an ongoing series of small, real security
+tools built out of the cybersecurity Internship Under Haryana Police Gurugram Cyber Cell.
