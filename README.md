@@ -53,19 +53,7 @@ python3 -m http.server 8000
 # visit http://localhost:8000
 ```
 
-## Deploying to GitHub Pages (so it's live)
-
-1. Push this repo to GitHub (repo name suggestion: `password-breach-checker`)
-2. On GitHub, go to **Settings → Pages**
-3. Under **Build and deployment → Source**, select **Deploy from a branch**
-4. Branch: `main`, folder: `/ (root)` → **Save**
-5. Wait ~1 minute, then your live URL will appear at the top of that Pages settings screen:
-   `https://<your-username>.github.io/password-breach-checker/`
-6. Update the "Live Demo" link at the top of this README with that URL
-
-That's it — no server, no environment variables, no cost.
-
-## Roadmap / ideas for later
+## Roadmap/ideas for later
 
 - [ ] Add zxcvbn-style pattern detection (dictionary words, keyboard walks, common substitutions)
 - [ ] Passphrase generator with the same entropy readout
@@ -74,4 +62,4 @@ That's it — no server, no environment variables, no cost.
 ---
 
 Built by [Arpit Singh](https://thakur.snapz.dev) — part of an ongoing series of small, real security
-tools built out of the cybersecurity Internship Under Haryana Police Gurugram Cyber Cell.
+tools built out of the cybersecurity internship under the Haryana Police Gurugram Cyber Cell.
