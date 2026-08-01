@@ -68,20 +68,6 @@
         <div id="breach-result" class="breach-idle">Start typing to run a check — nothing is sent until 500ms after you stop.</div>
       </div>
 
-      <details class="privacy-note">
-        <summary>How is this private?</summary>
-        <p>
-          Your password never leaves your device in plaintext. It's hashed locally with SHA-1 in your browser,
-          then only the <b>first 5 characters</b> of that hash are sent to the HaveIBeenPwned Pwned Passwords API.
-          HIBP returns every breached hash suffix that starts with those 5 characters — often thousands of them —
-          and the match happens locally on your device. This is the same
-          <a href="https://blog.cloudflare.com/validating-leaked-passwords-with-k-anonymity/" target="_blank" rel="noopener">k-anonymity model</a>
-          used by Chrome, Firefox, and 1Password's breach checks.
-        </p>
-      </details>
-    </div>
-  </section>
-
   <section class="notes">
     <div class="case-tag">FIELD NOTES</div>
     <p>
