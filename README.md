@@ -5,8 +5,8 @@ No backend, no password ever transmitted in plaintext, no tracking.
 
 **[Live Demo →]([https://whyonlythakur.github.io/password-breach-checker/](https://whyonlythakur.github.io/Clearance/))** 
 
-![screenshot placeholder](Screenshot_Mobile.png)
 ![screenshot placeholder](Screenshot_Pc.png)
+
 
 ---
 
